@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome PayPal SFTP Reports</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <div class="header w-full flex flex-col gap-2">
+            <h1 class="font-bold text-2xl">PayPal SFTP Reports</h1>
+            <a
+                    href="https://developer.paypal.com/docs/reports/sftp-reports/"
+                    target="_blank" class="underline text-blue-600 hover:text-blue-800">Documentation</a>
+        </div>
+        <div class="container mx-auto py-8">
+            <div class="flex py-2" id="filterButtons" class="mb-4 inline-flex rounded-md shadow-sm"></div>
+            <div>
+                <input type="text" id="fileSearch" placeholder="Search files..."
+                    class="border rounded-md px-3 py-2 my-2 w-full">
+            </div>
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" class="px-6 py-3">
+                                File name
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Download
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Preview
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% files.forEach(file => { %>
+
+                        <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                            <td scope="row"
+                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <%= file.name %>
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="/downloadFromSftp/<%= file.name %>"
+                                    class="text-blue-500 hover:underline">Download</a>
+                            </td>
+                            <td class="px-6 py-4">
+                                <button class="text-blue-500 hover:underline"
+                                    onclick="previewFile(this, '<%= file.name %>')">Preview</button>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700 preview-row"
+                            style="display: none;">
+                            <td colspan="3" class="preview-cell"></td>
+                        </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="sftp.js"></script>
+
+</html>
