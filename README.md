@@ -21,7 +21,15 @@ npm start
 
 ## Screenshots
 
+- SFTP Reports
+<br />
 ![Landing Page](./screenshots/sftpreports1.png)
 <br />
 ![Preview](./screenshots/sftpreports2.png)
 
+<br />
+<br />
+
+- List Transactions
+<br />
+![ListTransaction](./screenshots/listtransactions.png)
