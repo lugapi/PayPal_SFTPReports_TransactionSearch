@@ -1,4 +1,4 @@
-# PayPal SFTP reports panel
+# PayPal SFTP reports panel & List Transactions
 
 PayPal SFTP documentation: [https://developer.paypal.com/docs/reports/sftp-reports/](https://developer.paypal.com/docs/reports/sftp-reports/)
 
