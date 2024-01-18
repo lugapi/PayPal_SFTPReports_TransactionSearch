@@ -23,8 +23,11 @@ npm start
 
 - SFTP Reports
 <br />
+
 ![Landing Page](./screenshots/sftpreports1.png)
+
 <br />
+
 ![Preview](./screenshots/sftpreports2.png)
 
 <br />
@@ -32,4 +35,5 @@ npm start
 
 - List Transactions
 <br />
+
 ![ListTransaction](./screenshots/listtransactions.png)
