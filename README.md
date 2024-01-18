@@ -1,6 +1,7 @@
 # PayPal SFTP reports panel
 
 PayPal SFTP documentation: [https://developer.paypal.com/docs/reports/sftp-reports/](https://developer.paypal.com/docs/reports/sftp-reports/)
+
 PayPal List Transactions: [https://developer.paypal.com/docs/api/transaction-search/v1/#search_get](https://developer.paypal.com/docs/api/transaction-search/v1/#search_get)
 
 ## Installation
